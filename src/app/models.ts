@@ -4,15 +4,14 @@ export interface Game {
     released:string;
     metacritic_url: string;
     website: string;
-    description:string;
-    metacritic:number;
+    description: string;
+    metacritic: number;
     genres: Array<Genre>;
     parents_platforms: Array<ParentPlatform>;
     publishers: Array<Publishers>;
     ratings: Array<Rating>;
     screenshots: Array<Screenshots>;
     trailers: Array<Trailer>;
-
 }
 
 export interface APIResponse<T>{
@@ -24,7 +23,9 @@ interface Genre {
 }
 
 interface ParentPlatform{
-    name: string;
+    platform:{
+        name: string;
+    };
 }
 
 interface Publishers{
@@ -34,6 +35,7 @@ interface Publishers{
 interface Rating{
     id: number;
     count: number;
+    title: string;
 }
 
 interface Screenshots{
@@ -43,7 +45,6 @@ interface Screenshots{
 interface Trailer{
     data: {
         max: string;
-
     };
 }
 

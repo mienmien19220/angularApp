@@ -12,15 +12,14 @@ import { HttpService } from 'src/app/services/http.service';
 export class DetailsComponent implements OnInit, OnDestroy {
   gameRating = 0;
   gameId: string;
-  game:Game;
-  routeSub:Subscription;
+  game: Game;
+  routeSub: Subscription;
   gameSub: Subscription;
 
   constructor( 
     private ActivatedRoute: ActivatedRoute,
-    private httpService: HttpService) {
-   
-   }
+    private httpService: HttpService
+    ) {}
 
   ngOnInit(): void {
     this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) =>{
@@ -28,6 +27,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
       this.getGameDetails(this.gameId);
     });
   }
+
   getGameDetails(id: string): void {
     this.gameSub = this.httpService
       .getGameDetails(id)
@@ -38,9 +38,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
           this.gameRating = this.game.metacritic;
         }, 1000);
       })
-
   }
-
 
   getColor(value: number):string {
     if(value > 75){

@@ -10,12 +10,11 @@ import { APIResponse, Game } from '../models';
 })
 export class HttpService {
 
-
   constructor(private http: HttpClient) { }
 
   getGameList(
     odering: string,
-    search?: string,
+    search?: string
   ): Observable<APIResponse<Game>>{
     let params = new HttpParams().set('odering', odering);
 
@@ -27,6 +26,7 @@ export class HttpService {
       params: params,
     });
   }
+
   getGameDetails(id: string): Observable<Game> {
       const gameInfoRequest = this.http.get(`${env.BASE_URL}/games/${id}`);
       const gameTrailersRequest = this.http.get(
@@ -35,18 +35,19 @@ export class HttpService {
       const gameScreenshortsRequest = this.http.get(
         `${env.BASE_URL}/games/${id}/screenshots` 
       );
+
       return forkJoin({
         gameInfoRequest,
         gameScreenshortsRequest,
         gameTrailersRequest,
       }).pipe(
-        map((resp: any) =>{
+        map((resp: any) => {
           return {
             ...resp['gameInfoRequest'],
             screenshots: resp['gameScreenshortsRequest']?.results,
             trailers: resp['gameTrailersRequest']?.results,
-          }
+          };
         })
-      )
+      );
     }
 }
