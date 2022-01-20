@@ -3,18 +3,20 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { APIResponse, Game } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
-
+import { SelectItem } from 'primeng/api';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
+
+
 export class HomeComponent implements OnInit, OnDestroy {
   public sort: string;
   public games: Array<Game>;
   private routeSub: Subscription;
   private gameSub: Subscription;
-
+  sortOptions: SelectItem[];
   
   constructor(
     private httpService: HttpService,
@@ -22,6 +24,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.sortOptions = [
+      {label: 'Name', value: 'name'},
+      {label: 'Released', value: 'released'},
+      {label: 'Add', value: 'add'},
+      {label: 'Created', value: 'created'},
+      {label: 'Updated', value: 'updated'},
+      {label: 'Rating', value: 'rating'},
+      {label: 'Metacritic', value: 'metacritic'},
+
+    ];
+
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
       if (params['game-search']){
         this.searchGames('metacrit', params['game-search']);
@@ -30,6 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
   }
+    
 
   searchGames(sort: string, search?: string):void {
     this.gameSub = this.httpService

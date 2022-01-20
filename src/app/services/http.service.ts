@@ -12,6 +12,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
+  
   getGameList(
     odering: string,
     search?: string
