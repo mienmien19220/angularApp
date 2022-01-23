@@ -1,0 +1,38 @@
+<div class="container-fluid" style="height: 70vh; background: url(assets/img/apaxlegend.png); width: 100%; background-size: cover;padding: 0; margin: 0; ">
+  <div class="container">
+    <h1>REGISTER</h1>
+    <div class="col-lg-12 justify-content-lg-center" style="padding-left:400px; padding-right: 400px;">
+      <form action="" [formGroup]="signupForm" (ngSubmit)="signUp()">
+        <div class="form-floating mb-3">
+          <input type="text" name="name" id="floatingInput" formControlName="name" placeholder="Your name"
+          class="form-control">
+          <label for="floatingInput" class="text-dark">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="phone" name="phone" id="floatingInput" placeholder="Phone" 
+          class="form-control">
+          <label for="floatingInput" class="text-dark">Phone</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" formControlName="email" name="email" id="floatingInput" placeholder="Your Email * " 
+          class="form-control">
+          <label for="floatingInput" class="text-dark">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" formControlName="password" id="floatingInput" 
+          placeholder="password * " class="form-control"> 
+          <label for="floatingInput" class="text-dark">Password</label>
+        </div>
+        <div class="form-floating mt-3">
+          <button class="btn btn-warning" type="submit"  id="floatingLogin" value="login">Register</button>
+        </div>
+      </form>
+      <div class="forgot mt-3 mb-3">
+        
+        <span class="d-flex justify-content-lg-center" >Already have account? <a routerLink="/login" class="text-white" > <strong>Login</strong></a></span>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

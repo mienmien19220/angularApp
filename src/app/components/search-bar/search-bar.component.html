@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark.bg-gradient">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
     <div class="container-fluid">
         <div class="search-container">
       <a class="logo" routerLink="/">DEDO ON DEDO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <strong><a class="nav-link active" aria-current="page" href="#">Home</a></strong>
@@ -14,8 +14,8 @@
             <strong><a class="nav-link" routerLink="/gameProduct">Products</a></strong>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Game Pass
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <strong> Game Pass</strong>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -24,8 +24,22 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <strong> User</strong>
+             </a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <li><a class="dropdown-item" routerLink="/user">List User</a></li>
+               <li><a class="dropdown-item" href="#">Another action</a></li>
+               <li><hr class="dropdown-divider"></li>
+               <li><a class="dropdown-item" href="#">Something else here</a></li>
+             </ul>
+           </li>
           <li class="nav-item">
-            <strong><a class="nav-link" routerLink="/login">LOGIN</a></strong>
+            <strong><a class="nav-link" routerLink="/login">Sign in</a></strong>
+          </li>
+          <li class="nav-item">
+            <strong><a class="nav-link" routerLink="/login">Log Out</a></strong>
           </li>
           
         </ul>
@@ -36,9 +50,10 @@
                 name="search" 
                 ngModel 
                 placeholder="Search 20,000+ games"/>
-                <button class="btn btn-outline-light ">Search</button>    
+                <button class="btn btn-warning "><i class="pi pi-search text-white"></i></button>    
             </form>
         </div>
       </div>
     </div>
+    
 </nav>

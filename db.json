@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "name": "Mien 12",
+      "email": "hatran192@gmail.com",
+      "phone": "321",
+      "password": ""
+    },
+    {
+      "id": 4,
+      "name": "traaaa",
+      "email": "abcs@gmail.com",
+      "phone": "1922",
+      "password": null
+    }
+  ],
+  "signup": [
+    {
+      "name": "Tran Mien Khanh Ha",
+      "email": "hatran1921@gmail.com",
+      "phone": "121221",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Ha",
+      "email": "mienmien@gmail.com",
+      "phone": "0123",
+      "password": "12",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,82 @@
+<div class="container mt-5 mb-2">
+  <h1 style="text-align:center; font-weight: bold; font-size: 30px;">LIST USER</h1>
+  
+<!-- Button trigger modal -->
+<button type="button" (click)="clickAddUser()" class="btn btn-warning mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add User
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2  class="modal-title text-dark" id="exampleModalLabel">Add User</h2>
+        <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        <form  class="" [formGroup]="formValue">
+          <div class="form-floating mb-3">
+              
+              <input type="text" name="text" formControlName="name" id="floatingInput" class="form-control">
+              <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+              
+              <input type="text" name="phone" formControlName="phone" id="floatingInput"  class="form-control" >
+              <label for="floatingInput">Phone</label>
+          </div>
+          <div class="form-floating mb-3">
+              
+              <input type="email" name="email" formControlName="email" id="floatingInput"  class="form-control">
+              <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            
+            <input type="password" name="password" id="floatingInput" formControlName="password" class="form-control"  required>
+            <label for="floatingInput">Password</label>
+        </div>
+          
+          
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning" *ngIf="showAdd"
+        (click)="addUser()">Add Details</button>
+        <button type="button" class="btn btn-warning" *ngIf="showbtn"
+        (click)="updateUser()">Update Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <p-table>
+    <ng-template pTemplate="header">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>  
+
+        <tr class="body mb-2" *ngFor="let data of allDedoData">
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.phone}}</td>
+          <td>{{data.email}}</td>
+          <td><button (click)="onEditData(data)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            class="btn btn-success" >Edit</button></td>
+          <td><button (click)="deleteData(data)"
+            class="btn btn-danger">Delete</button></td>
+        </tr> 
+    </ng-template>
+    
+   
+  </p-table>
+  
+</div>
+
+
