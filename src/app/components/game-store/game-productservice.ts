@@ -9,7 +9,7 @@ export class ProductService {
     status: string[] = ['OUTOFSTOCK', 'INSTOCK', 'LOWSTOCK'];
 
     productNames: string[] = [
-        "Bamboo Watch", 
+        "Wireless Controller - Forza Horizon 5 Limited Edition", 
         "Black Watch", 
         "Blue Band", 
         "Blue T-Shirt", 

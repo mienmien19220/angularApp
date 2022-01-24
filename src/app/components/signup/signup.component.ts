@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserData } from '../list-user/list-user.model';
 
 @Component({
   selector: 'app-signup',
@@ -15,6 +16,7 @@ export class SignupComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit(): void {
+
     this.signupForm = this.formBuilder.group(
       {
         name:[''],

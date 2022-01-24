@@ -13,6 +13,13 @@
       "email": "abcs@gmail.com",
       "phone": "1922",
       "password": null
+    },
+    {
+      "id": 5,
+      "name": "Ha",
+      "email": "mienmien@gmail.com",
+      "phone": "123",
+      "password": "1"
     }
   ],
   "signup": [
@@ -29,6 +36,13 @@
       "phone": "0123",
       "password": "12",
       "id": 2
+    },
+    {
+      "name": "employee 3",
+      "email": "hello@gmail.com",
+      "phone": "2223",
+      "password": "123",
+      "id": 3
     }
   ],
   "comments": [],

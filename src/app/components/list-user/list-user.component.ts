@@ -12,22 +12,26 @@ export class ListUserComponent implements OnInit {
 
   formValue!: FormGroup
   DedoModelObject: UserData = new UserData
-  allDedoData: any;
+  UserData: any=[];
+  allDedoData: any[];
   showAdd!: boolean
   showbtn!: boolean;
   constructor(private formBuilder: FormBuilder,
     private api:ApiService) { }
 
   ngOnInit(): void {
+    this.UserData.push(this.DedoModelObject)
     this.formValue = this.formBuilder.group({
-
+    
       name: [''],
       email: [''],
       phone: [''],
       password: ['']
     })
+    console.log(this.DedoModelObject)
     this.getAllData()
   }
+  
   clickAddUser(){
     this.formValue.reset();
     this.showAdd = true;
@@ -56,6 +60,7 @@ export class ListUserComponent implements OnInit {
   getAllData(){
     this.api.getDedo().subscribe(res=>{
       this.allDedoData = res;
+      
     })
   }
   //delete
