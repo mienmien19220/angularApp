@@ -1,25 +1,11 @@
 {
   "posts": [
     {
-      "id": 3,
-      "name": "Mien 12",
-      "email": "hatran192@gmail.com",
-      "phone": "321",
-      "password": ""
-    },
-    {
-      "id": 4,
-      "name": "traaaa",
-      "email": "abcs@gmail.com",
-      "phone": "1922",
-      "password": null
-    },
-    {
-      "id": 5,
+      "id": 1,
       "name": "Ha",
-      "email": "mienmien@gmail.com",
+      "email": "hello@gmail.com",
       "phone": "123",
-      "password": "1"
+      "password": null
     }
   ],
   "signup": [
@@ -43,6 +29,20 @@
       "phone": "2223",
       "password": "123",
       "id": 3
+    },
+    {
+      "name": "Ha",
+      "email": "mienmien@gmail.com",
+      "phone": "123",
+      "password": "12",
+      "id": 4
+    },
+    {
+      "name": "Ha",
+      "email": "hello@gmail.com",
+      "phone": "1922",
+      "password": "1",
+      "id": 5
     }
   ],
   "comments": [],

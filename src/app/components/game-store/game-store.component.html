@@ -1,3 +1,4 @@
+
 <div class="card">
     <p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="name"
         [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
@@ -16,7 +17,7 @@
                 <div class="product-list-item">
                     <div class="product-list-detail">
                         <div class="product-name">{{product.name}}</div>
-                        
+                        <div class="product-description">{{product.description}}</div>
                         <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
                         <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.category}}</span>
                     </div>
@@ -41,12 +42,12 @@
                     <div class="product-grid-item-content">
                         <img src="{{product.image}}" alt="pink">
                         <div class="product-name">{{product.name}}</div>
-                        
+                        <div class="product-description">{{product.description}}</div>
                         <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
                     </div>
                     <div class="product-grid-item-bottom">
                         <span class="product-price">${{product.price}}</span>
-                        <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+                        <p-button class="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
                     </div>
                 </div>
             </div>

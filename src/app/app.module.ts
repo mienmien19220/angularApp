@@ -31,7 +31,15 @@ import { RatingModule } from 'primeng/rating';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
-
+import { MatSliderModule } from '@angular/material/slider';
+import { MyLibModule } from 'projects/my-lib/src/public-api';
+import { MessagesModule} from 'primeng/messages';
+import { MessageModule} from 'primeng/message';
+import { ConfirmPopupModule} from 'primeng/confirmpopup';
+import { ConfirmationService, MessageService} from 'primeng/api';
+import { ToastModule } from "primeng/toast";
+import {PanelModule} from 'primeng/panel';
+import { DialogModule } from 'primeng/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +58,7 @@ import { ListUserComponent } from './components/list-user/list-user.component';
   ],
   imports: [
     BrowserModule,
+    MatSliderModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
@@ -65,10 +74,20 @@ import { ListUserComponent } from './components/list-user/list-user.component';
     DataViewModule,
     RippleModule,
     RatingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MyLibModule,
+    MessagesModule,
+    MessageModule,
+    ConfirmPopupModule,
+    ToastModule,
+    DialogModule,
+    PanelModule
+    
   ],
   providers:
     [
+      MessageService,
+      ConfirmationService,
       ProductService,
       {
         provide: HTTP_INTERCEPTORS,
@@ -80,6 +99,7 @@ import { ListUserComponent } from './components/list-user/list-user.component';
         useClass: HttpErrorsInterceptor,
         multi: true,
       }
+      
 
     ],
   bootstrap: [AppComponent],
