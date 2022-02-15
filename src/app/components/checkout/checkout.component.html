@@ -1,0 +1,64 @@
+<app-menubar></app-menubar>
+<div class="checkout_form">
+  <h4>Order Details</h4>
+  <form action="">
+    <div class="row">
+      <div class="col-sm-8 col-md-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="checkout_input">
+              <p>Name <span>*</span></p>
+              <input type="text" required>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="checkout_input">
+              <p>First name <span>*</span></p>
+              <input type="text" required>
+            </div>
+          </div>
+          
+        </div>
+        <div class="checkout_input">
+          <p>Adress <span>*</span></p>
+          <input type="text" required>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="checkout_input">
+              <p>Number <span>*</span></p>
+              <input type="number" required>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="checkout_input">
+              <p>Email <span>*</span></p>
+              <input type="email" required>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-4 col-md-6">
+        <div class="checkout_order">
+          <h4>Bill</h4>
+          <div class="checkout_order_products">Products <span>Total:</span></div>
+          <div class="checkout_order_products_list">
+            <div style="margin-top: 20px; margin-bottom: 20px;">
+              <div class="qty">
+                1
+                <span>$1000</span>
+              </div>
+              <div class="checkout_order_total " style="color:#000">Total: <span>$1000</span></div>
+              <button type="submit" class="order btn btn-outline-dark mt-3 px-5 mb-5" value="Order" style="width: 10.5em; height: 2.28em;" name="order">Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

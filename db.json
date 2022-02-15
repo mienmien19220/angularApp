@@ -6,6 +6,13 @@
       "email": "hello@gmail.com",
       "phone": "123",
       "password": null
+    },
+    {
+      "id": 2,
+      "name": "mienmien",
+      "email": "mienmien@gmail.com",
+      "phone": "1922",
+      "password": null
     }
   ],
   "signup": [
@@ -43,6 +50,20 @@
       "phone": "1922",
       "password": "1",
       "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "Ha",
+      "email": "hello@gmail.com",
+      "phone": "1922",
+      "password": "1",
+      "id": 7
     }
   ],
   "comments": [],

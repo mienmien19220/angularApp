@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Product } from '../components/game-store/game-product';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +11,13 @@ export class ApiService {
    
 
   } 
+
+  getProducts() {
+    return this._http.get<any>('assets/products.json')
+    .toPromise()
+    .then(res => <Product[]>res.data)
+    .then(data => { return data; });
+}
   //define POST, GET, PUT, DELETE 
   postDedo(data:any){
     return this._http.post<any>("http://localhost:3000/posts", data).pipe(map((res:any)=> {

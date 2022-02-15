@@ -23,6 +23,7 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { FooterComponent } from './components/footer/footer.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import {ButtonModule} from 'primeng/button';
 import { DataViewModule } from 'primeng/dataview';
 import { GameStoreComponent } from './components/game-store/game-store.component';
 import { RippleModule } from 'primeng/ripple';
@@ -32,7 +33,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { MyLibModule } from 'projects/my-lib/src/public-api';
+// import { MyLibModule } from 'projects/my-lib/src/public-api';
 import { MessagesModule} from 'primeng/messages';
 import { MessageModule} from 'primeng/message';
 import { ConfirmPopupModule} from 'primeng/confirmpopup';
@@ -40,6 +41,20 @@ import { ConfirmationService, MessageService} from 'primeng/api';
 import { ToastModule } from "primeng/toast";
 import {PanelModule} from 'primeng/panel';
 import { DialogModule } from 'primeng/dialog';
+import { ProductsComponent } from './components/admin/products/products.component';
+import { MyLibModule } from 'my-lib';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import {ChartModule} from 'primeng/chart';
+import { MenubarModule } from 'primeng/menubar';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { CartComponent } from './components/cart/cart.component';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,12 +68,19 @@ import { DialogModule } from 'primeng/dialog';
     LoginComponent,
     SignupComponent,
     ListUserComponent,
-
-
+    ProductsComponent,
+    AdminComponent,
+    MenubarComponent,
+    CartComponent,
+    CheckoutComponent,
+    ContactusComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     MatSliderModule,
+    ButtonModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
@@ -81,7 +103,13 @@ import { DialogModule } from 'primeng/dialog';
     ConfirmPopupModule,
     ToastModule,
     DialogModule,
-    PanelModule
+    PanelModule,
+    MenubarModule,
+    ChartModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatCardModule,
+    
     
   ],
   providers:

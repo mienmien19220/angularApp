@@ -12,7 +12,7 @@ export class ProductService {
         "Wireless Controller - Forza Horizon 5 Limited Edition", 
         "Black Watch", 
         "Blue Band", 
-        "Blue T-Shirt", 
+        "PS5 Slim", 
         "Bracelet", 
         "Brown Purse", 
         "Chakra Bracelet",

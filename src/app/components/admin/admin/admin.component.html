@@ -1,0 +1,84 @@
+<app-search-bar></app-search-bar>
+
+<!-- <p>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>Menu</mat-icon>
+    </button>
+    <span>Charts (Application Usage Dashboard) </span>
+    <span class="example-spascer"></span>
+
+  </mat-toolbar>
+</p> -->
+
+<mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Line Chart</mat-card-title>
+        <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="line" [data]="userUsageHoursData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> PolarArea Chart</mat-card-title>
+        <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="polarArea" [data]="userAppData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Bar Chart</mat-card-title>
+        <mat-card-subtitle> Bart graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="bar" [data]="userUsageHoursData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Pie Chart</mat-card-title>
+        <mat-card-subtitle>Pie graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="pie" [data]="userAppData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Donut Chart</mat-card-title>
+        <mat-card-subtitle>Donut graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="doughnut" [data]="userAppData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Radar Chart</mat-card-title>
+        <mat-card-subtitle>Radar graph is a graph that shows information</mat-card-subtitle>
+      </mat-card-header>
+      <p-chart type="radar" [data]="userUsageHoursData" [options]="options"></p-chart>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+<footer class="bg-light text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3 text-dark">
+    © 2022 Copyright:
+    <a class="text-dark" href="">Feber___</a>
+  </div>
+  <!-- Copyright -->
+</footer>

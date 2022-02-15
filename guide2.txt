@@ -3,3 +3,4 @@ ADD ANGULAR LIBRARY:
 2. ng generate library my-lib
 the lib u have just created is mean to be used by our angular app or by multiple applications. So these applications are the consumers and the public api is the user layer which defines what is available to the consumers of the library
 3. ng build my-lib
+4. ng g c counter --project demo-lib

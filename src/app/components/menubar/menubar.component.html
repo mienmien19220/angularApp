@@ -1,0 +1,11 @@
+<p-menubar [model]="items" class="menubar">
+  <button routerLink="/cart" class="btn btn-outline-light d-flex float-left" style="margin-left: -62px; margin-bottom: -35px; color:#000"><i class="pi pi-shopping-cart"></i><div class="badge bg-danger" style="font-size: 10px; top: -10px;">{{totalItem}}</div></button>
+  <form action="" class="d-flex"
+  
+    #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <input type="text" pInputText name="search"
+      ngModel
+      placeholder="Search 20,000+ games">
+    <a class="btn btn-outline-dark" icon=""><i class="pi pi-search"></i> </a>
+  </form> 
+</p-menubar>

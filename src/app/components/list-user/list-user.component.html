@@ -1,4 +1,5 @@
-<div class="container mt-5 mb-2">
+<app-search-bar></app-search-bar>
+<div class="container-fluid mt-5 mb-2">
   <h1 style="text-align:center; font-weight: bold; font-size: 30px;">List Of Customers</h1>
 
   <!-- Button trigger modal -->
@@ -6,6 +7,7 @@
     data-bs-target="#exampleModal">
     <i class="pi pi-user-plus" style="font-size: 1.5rem; color: #fff"></i>
   </button>
+  <a class="btn btn-outline-warning mb-3" href="/admin">Go back</a>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,22 +53,28 @@
     </div>
   </div>
 
-  <p-table [value]="allDedoData">
+  <p-table [value]="allDedoData" styleClass="p-datatable-customers" [rowHover]="true"
+    [rows]="10" [showCurrentPageReport]="true" [loading]="loading"
+    [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
     <ng-template pTemplate="header">
       <tr>
+
         <th>Id</th>
         <th>Name</th>
+        <th>Avatar</th>
         <th>Phone</th>
         <th>Email</th>
         <th>Functions</th>
-
+        <th><p-tableHeaderCheckbox></p-tableHeaderCheckbox></th>
       </tr>
 
     </ng-template>
     <ng-template pTemplate="body" let-data>
       <tr class="body mb-2">
+
         <td>{{data.id}}</td>
         <td>{{data.name}}</td>
+        <td>.</td>
         <td>{{data.phone}}</td>
         <td>{{data.email}}</td>
         <td><button (click)="onEditData(data)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -76,7 +84,9 @@
           <button (click)="deleteData(data)" class="btn btn-danger">
             <i class="pi pi-times" style="color: #fff"></i></button>
         </td>
+        <td><p-tableHeaderCheckbox></p-tableHeaderCheckbox></td>
       </tr>
+      
 
     </ng-template>
 

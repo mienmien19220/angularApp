@@ -5,7 +5,7 @@
 			"name": "Wireless Controller - Forza Horizon 5 Limited Edition",
 			"image": "assets/img/forza.jpg",
 			"price": 74.99,
-			"category": "Accessories",
+			"category": "Gaming",
 			"quantity": 24,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -15,7 +15,7 @@
 			"name": "Razer",
 			"image": "assets/img/razer.jpg",
 			"price": 249.99,
-			"category": "Accessories",
+			"category": "Gaming",
 			"quantity": 61,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -25,17 +25,17 @@
 			"name": "Backbone One for IOS",
 			"image": "assets/img/backbone.jpg",
 			"price": 99.99,
-			"category": "Accessories",
+			"category": "Gaming",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
 		},
 		{
 			"id": "1003",
-			"name": "Blue T-Shirt",
-			"image": "assets/img/backbone.jpg",
-			"price": 29,
-			"category": "Clothing",
+			"name": "PS5 Slim",
+			"image": "assets/img/ps5.jpg",
+			"price": 399.99,
+			"category": "Gaming",
 			"quantity": 25,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -68,36 +68,6 @@
 			"category": "Accessories",
 			"quantity": 5,
 			"inventoryStatus": "LOWSTOCK",
-			"rating": 3
-		},
-		{
-			"id": "1007",
-			"name": "Galaxy Earrings",
-			"image": "assets/img/backbone.jpg",
-			"price": 34,
-			"category": "Accessories",
-			"quantity": 23,
-			"inventoryStatus": "INSTOCK",
-			"rating": 5
-		},
-		{
-			"id": "1008",
-			"name": "Game Controller",
-			"image": "assets/img/backbone.jpg",
-			"price": 99,
-			"category": "Electronics",
-			"quantity": 2,
-			"inventoryStatus": "LOWSTOCK",
-			"rating": 4
-		},
-		{
-			"id": "1009",
-			"name": "Gaming Set", 
-			"image": "assets/img/backbone.jpg",
-			"price": 299,
-			"category": "Electronics",
-			"quantity": 63,
-			"inventoryStatus": "INSTOCK",
 			"rating": 3
 		}
 	]

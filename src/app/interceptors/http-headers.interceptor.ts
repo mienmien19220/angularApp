@@ -22,5 +22,3 @@ export class HttpHeadersInterceptor implements HttpInterceptor{
         return next.handle(req);
     }
 }
-// 'x-rapidapi-key': '72955c1f6fmsh995260b4c212f22p13e20fjsn340557d76404',
-// 'x-rapidapi-key': '09ee04c512msh6f02b0500e8a15dp11b7c2jsnf3f6f37c054f',

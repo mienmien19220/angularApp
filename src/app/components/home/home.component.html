@@ -1,64 +1,154 @@
-<div class="container mt-5">
+<!-- <app-search-bar></app-search-bar> -->
+<app-menubar></app-menubar>
+<div class="header container-fluid px-0" style="background: #000">
+  <div class="container-fluid mt-5 mb-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-            
-          <div class="carousel-item active">
-            
-            <img src="assets/img/destiny2.jpg" class="d-block w-100" alt="..." style="height: 550px">
-          </div>
-          <div class="carousel-item ">
-            <iframe class="d-block w-100" width="100%" height="550" src="https://www.youtube.com/embed/uQBKoZIYNrs?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/borderland3.jpg" class="d-block w-100" alt="..." style="height: 550px">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/apaxlegend.png" class="d-block w-100" alt="..." style="height: 550px">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
-</div>
-<div class="filters">
-    <!-- add p-dropdown -->
-    <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-        <p-dropdown [options]="sortOptions"  placeholder="Sort" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
-               
-    </div>
-</div>
-
-<div class="games">
-    <ng-container *ngFor="let game of games">
-        <div class="game" (click)="openGameDetails(game.id)">
-            <div class="game-thumb-container">
-                <img 
-                *ngIf="game.background_image"
-                src="{{ game.background_image }}"
-                alt="thumbnail"
-                class="game-thumbnail"/>
-                <p *ngIf="!game.background_image">No image</p>
-
-            </div>
-            <div class="game-description">
-                
-                <p class="game-name">{{ game.name }}</p>
-                <a class="btn btn-outline-light text-center mb-2" (click)="openGameDetails(game.id)">See more details...</a>
-                
-            </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/apxlnd.jpg" class="d-block w-100" alt="..." style="height: 550px">
+          <div class="carousel-caption">
+            <h2>APAX LEGENDS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias veritatis aliquid numquam nam
+              corrupti reiciendis vel distinctio! Tenetur deserunt quos sunt provident odio qui quia fuga rerum ratione
+              temporibus?</p>
+          </div>
         </div>
+        <div class="carousel-item">
+
+          <img src="assets/img/destiny2.jpg" class="d-block w-100" alt="..." style="height: 550px">
+        </div>
+        <div class="carousel-item">
+          <iframe class="d-block w-100" width="100%" height="550"
+            src="https://www.youtube.com/embed/uQBKoZIYNrs?autoplay=1" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/borderland3.jpg" class="d-block w-100" alt="..." style="height: 550px">
+          <div class="carousel-caption">
+            <h2>BORDERLANDS 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias veritatis aliquid numquam nam
+              corrupti reiciendis vel distinctio! Tenetur deserunt quos sunt provident odio qui quia fuga rerum ratione
+              temporibus?</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="games">
+    <div class="filters d-flex float-right">
+
+      <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+        <p-dropdown [options]="sortOptions" placeholder="Sort" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+  
+      </div>
+    </div>
+    <div class="container"><h1 style="font-weight: bolder; 
+    ">POPULAR GAMES</h1></div>
+    <ng-container *ngFor="let game of games">
+      <div class="game" (click)="openGameDetails(game.id)">
+        <div class="game-thumb-container">
+          <img
+            *ngIf="game.background_image"
+            src="{{ game.background_image }}"
+            alt="thumbnail"
+            class="game-thumbnail" />
+          <p *ngIf="!game.background_image">No image</p>
+
+        </div>
+        <div class="game-description">
+
+          <p class="game-name">{{ game.name }}</p>
+          <a class="btn btn-outline-light text-center mb-2" (click)="openGameDetails(game.id)">See more details...</a>
+        </div>
+      </div>
     </ng-container>
+  </div>
+  <!-- <app-game-store> </app-game-store> -->
+
+
+  <br>
+  <!-- <lib-counter></lib-counter> -->
 </div>
+<div class="container-fluid">
+  <div class="container">
+    <h1 style="font-weight: bolder;">HOTTEST GAMES</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="contain">
+        <figure>
+          <a href=""><img src="assets/img/pubg.jpg" alt="" width="100%" height="600px"></a>
+          <div class="title">
+            <strong><h1>More Infor</h1></strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <a href="" class="btn btn-outline-light" >More details...</a>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="contain">
+        <figure>
+          <a href=""><img src="assets/img/payday2.jpg" alt="" width="100%" height="600px"></a>
+          <div class="title">
+            <strong><h1>More Infor</h1></strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <a href="" class="btn btn-outline-light" >More details...</a>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="contain">
+        <figure>
+          <a href=""> <img src="assets/img/apaxlegend2.png" alt="" width="100%" height="600px"></a>
+          <div class="title">
+            <strong><h1>More Infor</h1></strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <a href="" class="btn btn-outline-light" >More details...</a>
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="contain">
+        <figure>
+          <a href=""><img src="assets/img/callofduty.png" alt="" width="100%" height="600px"></a>
+          <div class="title">
+            <strong><h1>More Infor</h1></strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <a href="https://www.callofduty.com/" class="btn btn-outline-light" >More details...</a>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<lib-my-lib></lib-my-lib>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
+<app-footer></app-footer>

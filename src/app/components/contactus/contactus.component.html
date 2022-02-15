@@ -1,0 +1,91 @@
+<app-menubar></app-menubar>
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <div class="breadcrumb__text">
+                  <h1 style="color: #fff; margin:50px;  text-transform: uppercase;font-weight: bold;">Contact </h1>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- Contact Section Begin -->
+<section class="contact spad">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+              <div class="contact__widget">
+                  <span class="fa fa-phone" style="color: #fff; font-size: 40px;"></span>
+                  <h4 style="line-height: 40px;">Phone Number</h4>
+                  <p>+84 123 123 123</p>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+              <div class="contact__widget">
+                  <span class="fa fa-map-marker" style="color: #fff; font-size: 40px;"></span>
+                  <h4 style="line-height: 40px;">Adress</h4>
+                  <p>263 Hoang Van Thu, distrist 1, HCM </p>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+              <div class="contact__widget">
+                  <span class="fa fa-calendar" style="color: #fff;  font-size: 40px;"></span>
+                  <h4 style="line-height: 40px;">Open time</h4>
+                  <p>(7:00 a.m - 21:00 p.m)</p>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+              <div class="contact__widget">
+                  <span class="fa fa-envelope" style="color: #fff; font-size: 40px;"></span>
+                  <h4 style="line-height: 40px;">Email</h4>
+                  <p> dedoondedo.org@gmail.com</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Contact Form Begin -->
+<br><br>
+<div class="contact-form spad">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="contact__form__title">                  
+                      <h2 style="text-align: center;">Contact to us</h2>
+                    <hr>
+              </div>
+          </div>
+      </div>
+
+      <h4 class="sent-notification"></h4>
+      <form action="" id="contactUs" class="contact-form" method="POST">
+          <div class="row">
+              <div class="col-lg-6 col-md-6">
+                  <input id="name1" type="text" placeholder="Your name" style="width:100%; padding:10px; margin-bottom: 10px;border-radius: 5px;border: 1px solid #acacac" required>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                  <input name="email" type="email" placeholder="Your Email" style="width:100%; padding:10px;border-radius: 5px;border: 1px solid #acacac" required>
+                  <input type="hidden" name="_next" value="">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_subject" value="Phản hồi cho Tiệm">
+                  <input type="hidden" name="_cc" value="mienmien192@gmail.com">
+              </div>
+              <br><br>
+
+              <div class="col-lg-12 text-center">
+                  <input type="text" name="message" placeholder="Your message" style="width:100%; height:120px; padding:10px; border-radius: 5px;border: 1px solid #acacac" required> <br> <br>
+                  <button type="submit" value="Send " class="btn btn-outline-light mb-4">Send</button>
+
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ApiService } from 'src/app/shared/api.service';
 import { UserData } from './list-user.model';
+import { Table } from 'primeng/table';
 import {ConfirmationService, MessageService, PrimeNGConfig,Message} from "primeng/api"
 @Component({
   selector: 'app-list-user',
@@ -12,6 +13,7 @@ export class ListUserComponent implements OnInit {
   msgs1: Message[];
   msgs2: Message[];
 
+  loading: boolean = true;
   formValue!: FormGroup
   DedoModelObject: UserData = new UserData
   UserData: any=[];
@@ -26,6 +28,7 @@ export class ListUserComponent implements OnInit {
     private api:ApiService) { }
 
   ngOnInit(): void {
+    this.loading = false;
     this.msgs1 = [
       {severity:'success', summary:'Success', detail:'Message content'},
       {severity:'info', summary:'Info', detail:'Message content'},
