@@ -44,16 +44,16 @@
 
       </div>
       <div class="col-sm-4 col-md-6">
-        <div class="checkout_order">
+        <div class="checkout_order" *ngFor="let product of products">
           <h4>Bill</h4>
           <div class="checkout_order_products">Products <span>Total:</span></div>
           <div class="checkout_order_products_list">
             <div style="margin-top: 20px; margin-bottom: 20px;">
               <div class="qty">
-                1
-                <span>$1000</span>
+                {{product.quantity}}
+                <span>${{product.price}}</span>
               </div>
-              <div class="checkout_order_total " style="color:#000">Total: <span>$1000</span></div>
+              <div class="checkout_order_total " style="color:#000">Total: <span>${{product.price}}</span></div>
               <button type="submit" class="order btn btn-outline-dark mt-3 px-5 mb-5" value="Order" style="width: 10.5em; height: 2.28em;" name="order">Order</button>
             </div>
           </div>
