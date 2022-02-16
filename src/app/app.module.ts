@@ -53,6 +53,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+
 
 
 @NgModule({
@@ -109,7 +111,7 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     MatToolbarModule,
     MatGridListModule,
     MatCardModule,
-    
+    ConfirmDialogModule,
     
   ],
   providers:

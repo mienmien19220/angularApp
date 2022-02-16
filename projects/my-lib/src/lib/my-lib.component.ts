@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         <div class="row ">
             <h1 class="menu_home_title line_after_heading2" style=" text-transform: uppercase;font-weight: bold;"><strong>NEWS </strong><a href="" class="btn btn-outline-light" style="float:right; width:200px; height:40px;text-transform: uppercase; color:#ea8025; font-weight: bold;">All News</a>                <br></h1>
             <div class="col-md-12 bg-light pt-3 ">
-                <img src="assets/img/pban.jpg" alt="" width="100%" height="350px"> <br><br>
+                <img src="assets/img/pban.jpg" alt="" width="100%" height="400px"> <br><br>
             </div>
 
             <div class="col-md-12 bg-light" style=" margin-bottom: 50px; ">
