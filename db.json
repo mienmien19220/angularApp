@@ -13,6 +13,13 @@
       "email": "mienmien@gmail.com",
       "phone": "1922",
       "password": null
+    },
+    {
+      "id": 3,
+      "name": "Harley",
+      "email": "hatran1921@gmail.com",
+      "phone": "0345034202",
+      "password": ""
     }
   ],
   "signup": [
@@ -64,6 +71,13 @@
       "phone": "1922",
       "password": "1",
       "id": 7
+    },
+    {
+      "name": "Ha",
+      "email": "hello@gmail.com",
+      "phone": "123",
+      "password": "1234",
+      "id": 8
     }
   ],
   "comments": [],
