@@ -22,7 +22,6 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { FooterComponent } from './components/footer/footer.component';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
 import {ButtonModule} from 'primeng/button';
 import { DataViewModule } from 'primeng/dataview';
 import { GameStoreComponent } from './components/game-store/game-store.component';
@@ -65,7 +64,6 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     DetailsComponent,
     GameTabsComponent,
     FooterComponent,
-    DropdownComponent,
     GameStoreComponent,
     LoginComponent,
     SignupComponent,
@@ -99,7 +97,9 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     RippleModule,
     RatingModule,
     ReactiveFormsModule,
+
     MyLibModule,
+    
     MessagesModule,
     MessageModule,
     ConfirmPopupModule,

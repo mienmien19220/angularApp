@@ -7,9 +7,10 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.sass']
 })
 export class CartComponent implements OnInit {
-
+  quantity: number=1;
   public products : any = [];
   public grandTotal !: number;
+  price: number;
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -26,5 +27,14 @@ export class CartComponent implements OnInit {
   emptycart(){
     this.cartService.removeAllCart();
   }
+  onPlusClick(){
+    this.quantity++;
+  }
+
+  onMinusClick(){
+    this.quantity--;
+  }
+
+  
 
 }

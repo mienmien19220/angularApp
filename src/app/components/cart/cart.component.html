@@ -26,15 +26,13 @@
               <td>{{product.name}}</td>
               <td><img style="width: 120px;" src="{{product.image}}" alt=""></td>
               <td><div class="quatity d-flex">
-                <form action="" class="reduceCart">
-                  <input type="submit" value="-" class="btn btn-outline-light">
-                </form>&nbsp;
+                
                 <span>
-                  {{product.quantity}}
+                  <button class="btn btn-warning" (click)="onMinusClick()"> - </button>
+                  <label for=""> &nbsp; {{quantity}} &nbsp; </label>
+                  <button class="btn btn-warning" (click)="onPlusClick()"> + </button>
                 </span>
-                <form action="" class="increaseCart"> &nbsp;
-                  <input type="submit" value="+" class="btn btn-outline-light" >
-                </form>
+                
               </div></td>
               <td>${{product.price}}</td>
               <td>${{product.price}}</td>

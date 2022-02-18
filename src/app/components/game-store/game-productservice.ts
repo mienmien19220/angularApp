@@ -21,8 +21,7 @@ export class ProductService {
         "Gaming Set",
         "Gold Phone Case",
         "Green Earbuds",
-        "Green T-Shirt",
-        "Grey T-Shirt",
+        
     ];
 
     constructor(private http: HttpClient) { }
