@@ -1,36 +1,97 @@
 <app-search-bar></app-search-bar>
 <div class="container-fluid mt-5 mb-2">
-  <div class="row">
+  <div class="row ">
     <div class="content justify-content-center mb-3 mt-2">
       <h1 style="text-align:center; font-weight: bold; font-size: 30px;">List Of Products</h1> 
       <!-- Button trigger modal -->
-  <button type="button"  class="btn btn-warning mb-3 d-flex" data-bs-toggle="modal"
-  data-bs-target="#exampleModal">
-  <i class="pi pi-user-plus" style="font-size: 1.5rem; color: #fff"></i>
-</button>
-<a class="btn btn-outline-warning mb-3" href="/admin">Go back</a>
+      <a class="btn btn-outline-warning mb-3" href="/admin">Go back</a>
+      <p-button (click)="openDialog()" icon="pi pi-plus" label="" class="d-flex " ></p-button>
+      <p-dialog header="Add Product" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+          <div class="body">
+            <form class="" [formGroup]="formValue">
+              <div class="form-floating mb-3">
+  
+                <input type="text" name="text" formControlName="name" id="floatingInput" class="form-control">
+                <label for="floatingInput">Name Product</label>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <input type="number" name="price" formControlName="price" id="floatingInput" class="form-control">
+                <label for="floatingInput">Price</label>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <input type="text" name="inventoryStatus" formControlName="inventoryStatus" id="floatingInput" class="form-control">
+                <label for="floatingInput">Inventory Status</label>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <input type="number" name="quantity" formControlName="quantity" id="floatingInput" class="form-control">
+                <label for="floatingInput">Quantity</label>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <select name="" id="" formControlName="category">
+                  <option value="" selected>Category</option>
+                  <option value="">Game</option>
+                  <option value="">Accessory</option>
+                </select>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <input type="file" name="image" formControlName="image" id="floatingInput" class="form-control">
+                <label for="floatingInput">Image</label> <br>
+              </div>
+              <div class="form-floating mb-3">
+  
+                <input type="number" name="rating" formControlName="rating" id="floatingInput" class="form-control">
+                <label for="floatingInput">Rating</label>
+              </div>
+
+
+            
+            </form>
+          </div>
+
+          <ng-template pTemplate="footer">
+              <p-button icon="pi pi-check" (click)="postProductDetails()" label="Add" styleClass="p-button-text"></p-button>
+              <p-button icon="pi pi-times" id="cancel"  label="Close"></p-button>
+          </ng-template>
+      </p-dialog>
+  
+
     </div>
+<!-- Modal -->
+
 
     <div class="col-12">
-      <p-table [value]="products" styleClass="p-datatable-customers" [rowHover]="true"
+      <p-table #dt [value]="products" styleClass="p-datatable-customers" [rowHover]="true" [globalFilterFields]="['name','price','inventoryStatus','quantity','category']"
       [rows]="10" [showCurrentPageReport]="true" [loading]="loading"
       [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+      <ng-template pTemplate="caption">
+        <div class="flex">
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
+            </span>
+        </div>
+    </ng-template>
         <ng-template pTemplate="header">
           <tr>
-            <th>Id</th>
-            <th>Name Product</th>
-            <th>Price</th>
-            <th>inventory Status</th>
-            <th>Quantity</th>
-            <th>Category</th>
+            <th >Id</th>
+            <th pSortableColumn="name">Name Product <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+            <th pSortableColumn="inventoryStatus">inventory Status <p-sortIcon field="inventoryStatus"></p-sortIcon></th>
+            <th pSortableColumn="quantity">Quantity <p-sortIcon field="quantity"></p-sortIcon></th>
+            <th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon></th>
             <th>Image</th>
-            <th>Rating</th>
+            <th pSortableColumn="rating">Rating <p-sortIcon field="rating"></p-sortIcon></th>
             <th>Functions</th>
           </tr>
         </ng-template>
 
-        <ng-template pTemplate="body">
-          <tr class="body mb-2" *ngFor="let product of products">
+        <ng-template pTemplate="body" let-product >
+          <tr class="body mb-2" >
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>${{product.price}}</td>
@@ -39,12 +100,12 @@
             <td>{{product.category}}</td>
             <td><img width="120px" src="{{product.image}}" alt=""></td>
             <td>{{product.rating}}</td>
-            <td><button (click)="onEditData(product)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              class="btn btn-success"> <i class="pi pi-pencil" style="color: #fff"></i>
+            <td><p-button type="button" 
+              > <i class="pi pi-pencil" style="color: #fff"></i>
   
-            </button> &nbsp;
-            <button (click)="deleteData(product)" class="btn btn-danger">
-              <i class="pi pi-times" style="color: #fff"></i></button></td>
+            </p-button> &nbsp;
+            <p-button >
+              <i class="pi pi-times" (click)="deleteProduct(product)" style="color: #fff"></i></p-button></td>
           </tr>
         </ng-template>
       </p-table>

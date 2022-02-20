@@ -136,7 +136,38 @@
       "id": 16
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "name": "shutdown",
+      "price": 12,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 1212,
+      "category": "",
+      "image": "C:\\fakepath\\5B1ACD50-BC66-4714-86A7-231B90A32DF0.jpg",
+      "rating": 4,
+      "id": 2
+    },
+    {
+      "name": "Wireless Controller - Forza Horizon 5 Limited Edition",
+      "price": 74.99,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 24,
+      "category": "",
+      "image": "C:\\fakepath\\forza.jpg",
+      "rating": 4,
+      "id": 3
+    },
+    {
+      "name": "Razer",
+      "price": 249.99,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 61,
+      "category": "",
+      "image": "",
+      "rating": 4,
+      "id": 4
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

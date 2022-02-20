@@ -31,7 +31,8 @@ import { RatingModule } from 'primeng/rating';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
-import { MatSliderModule } from '@angular/material/slider';
+
+import * as slider from '@angular/material/slider';
 // import { MyLibModule } from 'projects/my-lib/src/public-api';
 import { MessagesModule} from 'primeng/messages';
 import { MessageModule} from 'primeng/message';
@@ -53,7 +54,8 @@ import { MatCardModule } from '@angular/material/card';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
-
+import { FormBuilder } from '@angular/forms';
+import {FileUploadModule} from 'primeng/fileupload';
 
 
 @NgModule({
@@ -79,7 +81,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
   ],
   imports: [
     BrowserModule,
-    MatSliderModule,
+    slider.MatSliderModule,
     ButtonModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -97,7 +99,8 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     RippleModule,
     RatingModule,
     ReactiveFormsModule,
-
+    FileUploadModule,
+    
     MyLibModule,
     
     MessagesModule,
@@ -119,6 +122,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
       MessageService,
       ConfirmationService,
       ProductService,
+      FormBuilder,
       {
         provide: HTTP_INTERCEPTORS,
         useClass: HttpHeadersInterceptor,

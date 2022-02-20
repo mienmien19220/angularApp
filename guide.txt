@@ -4,4 +4,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-S/7/1: search function, styling home component, create http service
+S/7/1: search function, styling home component, create http service.
+
+chia table admin, them thong tin khach hang khi click vao san pham, then profile nguoi dung, su dung toast de hien thi request. them table category cho sp. su dung unit test de fix bug. them component vao library. viet code + - quantity va` total. checkout va` thanh toan sp. chinh sua alert thanh toast.

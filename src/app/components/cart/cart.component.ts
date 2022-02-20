@@ -7,7 +7,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.sass']
 })
 export class CartComponent implements OnInit {
-  quantity: number=1;
+  qty: number=1;
   public products : any = [];
   public grandTotal !: number;
   price: number;
@@ -28,13 +28,14 @@ export class CartComponent implements OnInit {
     this.cartService.removeAllCart();
   }
   onPlusClick(){
-    this.quantity++;
+    this.qty++;
   }
 
   onMinusClick(){
-    this.quantity--;
+    this.qty--;
   }
-
   
+
+
 
 }

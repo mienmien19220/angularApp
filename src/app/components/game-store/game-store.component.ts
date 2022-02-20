@@ -5,6 +5,7 @@ import { SelectItem } from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
 import { CartService } from 'src/app/services/cart.service';
 import { ApiService } from 'src/app/shared/api.service';
+
 @Component({
   selector: 'app-game-store',
   templateUrl: './game-store.component.html',
@@ -40,8 +41,9 @@ export class GameStoreComponent implements OnInit {
       { label: 'Price Low to High', value: 'price' }
     ];
   }
-  addtocart(product: any) {
-    this.cartService.addtoCart(product);
+  addtocart(product: any) { 
+    this.cartService.addtoCart(product)
+    // .subscribe(res.send("add thành công"))
   }
   onSortChange(event) {
     let value = event.value;

@@ -10,70 +10,82 @@
 
   </mat-toolbar>
 </p> -->
+<div class="container-fluid " style="margin-top: -6px">
 
-<mat-grid-list cols="3" rowHeight="1:1">
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> Line Chart</mat-card-title>
-        <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="line" [data]="userUsageHoursData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+<div class="row">
+  <mat-grid-list class="col-10"cols="3" rowHeight="1:1">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Line Chart</mat-card-title>
+          <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="line" [data]="userUsageHoursData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
 
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> PolarArea Chart</mat-card-title>
-        <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="polarArea" [data]="userAppData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> PolarArea Chart</mat-card-title>
+          <mat-card-subtitle>Line graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="polarArea" [data]="userAppData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
 
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> Bar Chart</mat-card-title>
-        <mat-card-subtitle> Bart graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="bar" [data]="userUsageHoursData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Bar Chart</mat-card-title>
+          <mat-card-subtitle> Bart graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="bar" [data]="userUsageHoursData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
 
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> Pie Chart</mat-card-title>
-        <mat-card-subtitle>Pie graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="pie" [data]="userAppData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Pie Chart</mat-card-title>
+          <mat-card-subtitle>Pie graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="pie" [data]="userAppData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
 
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> Donut Chart</mat-card-title>
-        <mat-card-subtitle>Donut graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="doughnut" [data]="userAppData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Donut Chart</mat-card-title>
+          <mat-card-subtitle>Donut graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="doughnut" [data]="userAppData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
 
-  <mat-grid-tile>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title> Radar Chart</mat-card-title>
-        <mat-card-subtitle>Radar graph is a graph that shows information</mat-card-subtitle>
-      </mat-card-header>
-      <p-chart type="radar" [data]="userUsageHoursData" [options]="options"></p-chart>
-    </mat-card>
-  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title> Radar Chart</mat-card-title>
+          <mat-card-subtitle>Radar graph is a graph that shows information</mat-card-subtitle>
+        </mat-card-header>
+        <p-chart type="radar" [data]="userUsageHoursData" [options]="options"></p-chart>
+      </mat-card>
+    </mat-grid-tile>
+   
+  </mat-grid-list>
+  <div class="col-2 p-flex-column bg-light">
+    <div class="p-mb-2"><a class="" routerLink="/admin" style="text-decoration: none; color: #000;padding: 50px; "> Dashboard</a></div> <br>
+    
+    <div class="p-mb-2"><a class="" routerLink="/product" style="text-decoration: none; color: #000;  padding: 50px;"> List Of Products </a></div> <br> 
+    <div class="p-mb-2"><a class="" routerLink="/user" style="text-decoration: none; color: #000; padding: 50px;">List Of Customers </a></div> <br> 
+  
+  </div>
 
-</mat-grid-list>
+</div>
 
+</div>
 <footer class="bg-light text-center text-white">
   <!-- Copyright -->
   <div class="text-center p-3 text-dark">

@@ -28,14 +28,14 @@
               <td><div class="quatity d-flex">
                 
                 <span>
-                  <button class="btn btn-warning" (click)="onMinusClick()"> - </button>
-                  <label for=""> &nbsp; {{quantity}} &nbsp; </label>
-                  <button class="btn btn-warning" (click)="onPlusClick()"> + </button>
+                  <button class="btn btn-outline-light" (click)="onMinusClick()"> - </button>
+                  <label for=""> &nbsp; {{qty}} &nbsp; </label>
+                  <button class="btn btn-outline-light" (click)="onPlusClick()"> + </button>
                 </span>
                 
               </div></td>
               <td>${{product.price}}</td>
-              <td>${{product.price}}</td>
+              <td>${{product.price*qty}}</td>
               <td><button (click)="removeItem(product)" class="btn btn-danger"><i class="pi pi-times" style="color: #fff"></i></button></td>
             </tr>
             <tr>
@@ -52,7 +52,7 @@
                 <button class="btn btn-outline-warning" routerLink="/checkout">CheckOut</button>
                 
               </td>
-              <td><strong>Grand Total: ${{grandTotal}}</strong></td>
+              <td><strong>Grand Total: ${{grandTotal*qty}}</strong></td>
             </tr>
           </tbody>
   

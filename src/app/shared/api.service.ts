@@ -18,7 +18,33 @@ export class ApiService {
     .then(res => <Product[]>res.data)
     .then(data => { return data; });
 }
-  //define POST, GET, PUT, DELETE 
+//define POST, GET, PUT, DELETE product
+  postProd(data:any){
+    return this._http.post<any>("http://localhost:3000/comments", data).pipe(map((res:any)=> {
+      return res;
+    }))
+  }
+   //get product data using GET
+    getProd(){
+    return this._http.get<any>("http://localhost:3000/comments").pipe(map((res:any)=> {
+      return res;
+    }))
+  }
+   //update product data using put
+   updateProd(product:any, id:number){
+    return this._http.put<any>("http://localhost:3000/comments/"+id,product).pipe(map((res:any)=> {
+      return res;
+    }))
+  }
+  //delete
+  deleteProd(id:number){
+    return this._http.delete<any>("http://localhost:3000/comments/"+id).pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+
+  
+  //define POST, GET, PUT, DELETE user
   postDedo(data:any){
     return this._http.post<any>("http://localhost:3000/posts", data).pipe(map((res:any)=> {
       return res;

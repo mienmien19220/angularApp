@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +13,8 @@ export class LoginComponent implements OnInit {
     
     private formBuilder: FormBuilder,
     private _http: HttpClient,
-    private router: Router) { }
+    private router: Router,
+    ) { }
   
   
   ngOnInit(): void {
@@ -32,9 +32,8 @@ export class LoginComponent implements OnInit {
           a.password === this.loginForm.value.password;
       })
       if (user) {
-        
         this.loginForm.reset();
-        this.router.navigate([''])
+        this.router.navigate(['']);
       } else {
         
       }
