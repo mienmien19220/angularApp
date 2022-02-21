@@ -1,7 +1,7 @@
 <app-search-bar></app-search-bar>
 <div class="container-fluid mt-5 mb-2">
   <h1 style="text-align:center; font-weight: bold; font-size: 30px;">List Of Customers</h1>
-  <a class="btn btn-outline-warning mb-3" href="/admin">Go back</a>
+  <a class="btn btn-outline-warning mb-3" href="/dashboard">Go back</a>
   <!-- Button trigger modal -->
   <button type="button" (click)="clickAddUser()" class="btn btn-warning mb-3 d-flex" data-bs-toggle="modal"
     data-bs-target="#exampleModal">
@@ -54,7 +54,7 @@
   </div>
 
   <p-table #dt [value]="allDedoData" styleClass="p-datatable-customers" [rowHover]="true" [globalFilterFields]="['name','phone','email']" dataKey="id"
-    [rows]="10" [showCurrentPageReport]="true" [loading]="loading"
+    [rows]="5" [showCurrentPageReport]="true" [loading]="loading"
     [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
     <ng-template pTemplate="caption">
       <div class="flex">

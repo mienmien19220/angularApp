@@ -1,27 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "name": "Ha",
-      "email": "hello@gmail.com",
-      "phone": "123",
-      "password": null
-    },
-    {
-      "id": 2,
-      "name": "mienmien",
-      "email": "mienmien@gmail.com",
-      "phone": "1922",
-      "password": null
-    },
-    {
-      "id": 3,
-      "name": "Harley",
-      "email": "hatran1921@gmail.com",
-      "phone": "0345034202",
-      "password": ""
-    }
-  ],
+  
   "signup": [
     {
       "name": "Tran Mien Khanh Ha",
@@ -59,113 +37,110 @@
       "id": 5
     },
     {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "password": "",
-      "id": 6
-    },
-    {
-      "name": "Ha",
+      "id": 7,
+      "name": "Ha Tr",
       "email": "hello@gmail.com",
-      "phone": "1922",
-      "password": "1",
-      "id": 7
-    },
-    {
-      "name": "Ha",
-      "email": "hello@gmail.com",
-      "phone": "123",
-      "password": "1234",
-      "id": 8
-    },
-    {
-      "name": "Ha",
-      "email": "hello12@gmail.com",
-      "phone": "2223",
-      "password": "1",
-      "id": 9
-    },
-    {
-      "name": "Ha",
-      "email": "hello12@gmail.com",
-      "phone": "123",
-      "password": "1",
-      "id": 10
-    },
-    {
-      "name": "Ha",
-      "email": "hatran1921@gmail.com",
-      "phone": "1212",
-      "password": "1",
-      "id": 11
-    },
-    {
-      "name": "Ha",
-      "email": "hatran1921@gmail.com",
-      "phone": "1922",
-      "password": "1",
-      "id": 12
-    },
-    {
-      "name": "Ha",
-      "email": "hatran1921@gmail.com",
-      "phone": "1922",
-      "password": "1",
-      "id": 13
-    },
-    {
-      "name": "Ha tran thi",
-      "email": "hello11111@gmail.com",
-      "phone": "123",
-      "password": "1",
-      "id": 14
-    },
-    {
-      "name": "mien khum",
-      "email": "mienmien112212@gmail.com",
-      "phone": "1",
-      "password": "1",
-      "id": 15
+      "phone": "0345034202",
+      "password": ""
     },
     {
       "name": "Tran Mien Khanh Ha",
-      "email": "hello11@gmail.com",
-      "phone": "1922",
-      "password": "1",
-      "id": 16
+      "email": "mienmien1922@gmail.com",
+      "phone": "0703759912",
+      "password": "12",
+      "id": 8
     }
   ],
-  "comments": [
+  "product": [
     {
-      "name": "shutdown",
-      "price": 12,
-      "inventoryStatus": "INSTOCK",
-      "quantity": 1212,
-      "category": "",
-      "image": "C:\\fakepath\\5B1ACD50-BC66-4714-86A7-231B90A32DF0.jpg",
-      "rating": 4,
-      "id": 2
-    },
-    {
+      "id": "1",
       "name": "Wireless Controller - Forza Horizon 5 Limited Edition",
-      "price": 74.99,
-      "inventoryStatus": "INSTOCK",
+      "image": "assets/img/forza.jpg",
+      "price": 74.90,
+      "category": "Gaming",
       "quantity": 24,
-      "category": "",
-      "image": "C:\\fakepath\\forza.jpg",
-      "rating": 4,
-      "id": 3
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
     },
     {
+      "id": "2",
       "name": "Razer",
-      "price": 249.99,
-      "inventoryStatus": "INSTOCK",
+      "image": "assets/img/razer.jpg",
+      "price": 249.90,
+      "category": "Gaming",
       "quantity": 61,
-      "category": "",
-      "image": "",
-      "rating": 4,
-      "id": 4
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "name": "Backbone One for IOS",
+      "image": "assets/img/backbone.jpg",
+      "price": 99.20,
+      "category": "Gaming",
+      "quantity": 2,
+      "inventoryStatus": "LOWSTOCK",
+      "rating": 3
+    },
+    {
+      "id": "4",
+      "name": "PS5 Slim",
+      "image": "assets/img/ps5.jpg",
+      "price": 399.99,
+      "category": "Gaming",
+      "quantity": 25,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "5",
+      "name": "Bracelet",
+      "image": "assets/img/backbone.jpg",
+      "price": 15,
+      "category": "Accessories",
+      "quantity": 73,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "6",
+      "name": "Brown Purse",
+      "image": "assets/img/backbone.jpg",
+      "price": 120,
+      "category": "Accessories",
+      "quantity": 0,
+      "inventoryStatus": "OUTOFSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "7",
+      "name": "Chakra Bracelet",
+      "image": "assets/img/backbone.jpg",
+      "price": 32,
+      "category": "Accessories",
+      "quantity": 5,
+      "inventoryStatus": "LOWSTOCK",
+      "rating": 3
+    },
+    {
+      "name": "XBOX Series X CYBER PLANET Skin, Wrap – EasySkinz™",
+      "price": 465,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 12,
+      "category": "Gaming",
+      "image": "assets/img/cyber.png",
+      "rating": 5,
+      "id": "8"
+    },
+    {
+      "name": "Microsoft xbox series x",
+      "price": 1000,
+      "inventoryStatus": "INSTOCK",
+      "quantity": 15,
+      "category": "Gaming",
+      "image": "assets/img/xbox-series.jpg",
+      "rating": 3,
+      "id": "9"
     }
   ],
   "profile": {

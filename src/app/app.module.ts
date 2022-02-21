@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.intercptor';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
+
 import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 import { TableModule } from 'primeng/table';
@@ -30,10 +30,8 @@ import { ProductService } from './components/game-store/game-productservice';
 import { RatingModule } from 'primeng/rating';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { ListUserComponent } from './components/list-user/list-user.component';
-
 import * as slider from '@angular/material/slider';
-// import { MyLibModule } from 'projects/my-lib/src/public-api';
+
 import { MessagesModule} from 'primeng/messages';
 import { MessageModule} from 'primeng/message';
 import { ConfirmPopupModule} from 'primeng/confirmpopup';
@@ -43,7 +41,7 @@ import {PanelModule} from 'primeng/panel';
 import { DialogModule } from 'primeng/dialog';
 import { ProductsComponent } from './components/admin/products/products.component';
 import { MyLibModule } from 'my-lib';
-import { AdminComponent } from './components/admin/admin/admin.component';
+
 import {ChartModule} from 'primeng/chart';
 import { MenubarModule } from 'primeng/menubar';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -56,26 +54,25 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import { FormBuilder } from '@angular/forms';
 import {FileUploadModule} from 'primeng/fileupload';
-
+import { ProfileComponent } from './components/profile/profile.component';
+import { AdminModule } from './components/admin/module/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchBarComponent,
     DetailsComponent,
     GameTabsComponent,
     FooterComponent,
     GameStoreComponent,
     LoginComponent,
     SignupComponent,
-    ListUserComponent,
     ProductsComponent,
-    AdminComponent,
     MenubarComponent,
     CartComponent,
     CheckoutComponent,
     ContactusComponent,
+    ProfileComponent,
     
     
   ],
@@ -100,9 +97,7 @@ import {FileUploadModule} from 'primeng/fileupload';
     RatingModule,
     ReactiveFormsModule,
     FileUploadModule,
-    
     MyLibModule,
-    
     MessagesModule,
     MessageModule,
     ConfirmPopupModule,
@@ -115,7 +110,7 @@ import {FileUploadModule} from 'primeng/fileupload';
     MatGridListModule,
     MatCardModule,
     ConfirmDialogModule,
-    
+    AdminModule
   ],
   providers:
     [

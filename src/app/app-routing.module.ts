@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './components/admin/admin/admin.component';
+import { AdminComponent } from './components/admin/dashboard/admin.component';
 import { ProductsComponent } from './components/admin/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
@@ -8,14 +8,23 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import { DetailsComponent } from './components/details/details.component';
 import { GameStoreComponent } from './components/game-store/game-store.component';
 import { HomeComponent } from './components/home/home.component';
-import { ListUserComponent } from './components/list-user/list-user.component';
+import { ListUserComponent } from './components/admin/list-user/list-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    children: [
+     {
+      path: 'admin',
+      loadChildren: () => import('./components/admin/module/admin.module').then(m => m.AdminModule) 
+     },
+
+    ]
+    
   },
   {
     path: 'search/:game-search',
@@ -38,18 +47,7 @@ const routes: Routes = [
     path: 'signup',
     component:SignupComponent,
   },
-  {
-    path: 'user',
-    component:ListUserComponent,
-  },
-  {
-    path: 'product',
-    component: ProductsComponent,
-  },
-  {
-    path: 'admin',
-    component: AdminComponent,
-  },
+  
   {
     path: 'cart',
     component: CartComponent,
@@ -61,7 +59,12 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactusComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
   }
+  
 ];
 
 @NgModule({

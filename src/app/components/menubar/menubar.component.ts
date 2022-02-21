@@ -34,7 +34,7 @@ export class MenubarComponent implements OnInit {
       {
         label: 'Admin',
         icon: 'pi pi-fw pi-user',
-        url: '/admin'
+        url: '/dashboard'
       },
       {
         label: 'Game Pass',
@@ -57,11 +57,11 @@ export class MenubarComponent implements OnInit {
 
         ]
       },
-      // {
-      //   label: 'Cart',
-      //   icon: 'pi pi-shopping-cart',        
-      //   url: '/cart'
-      // },
+      {
+        label: 'Profile',
+        icon: 'pi pi-user',        
+        url: '/profile'
+      },
       {
         label: 'ContactUs',        
         url: '/contact'

@@ -1,15 +1,15 @@
 <app-menubar></app-menubar>
 
 <ng-container *ngIf="products.length !=0">
-  <div class="title">
-    <h1 style="text-align: center; font-weight: 700;">Cart</h1>
+  <div class="title mt-4">
+    <h1 style="text-align: center; font-weight: 700;font-size: 30px;">Cart</h1>
   </div>
   <div class="container">
     <div class="card-table">
       <div class="cart-product">
         <table class="table table-responsive">
           <thead>
-            <tr>
+            <tr style="font-weight: 700; font-size: 20px;">
               <td>Id</td>
               <td>Product name</td>
               <td>Product Image</td>
@@ -39,7 +39,9 @@
               <td><button (click)="removeItem(product)" class="btn btn-danger"><i class="pi pi-times" style="color: #fff"></i></button></td>
             </tr>
             <tr>
-              <td colspan="4"></td>
+              
+              <td style="font-size:20px; padding-top: 20px;"><strong>Grand Total: ${{grandTotal*qty}}</strong></td>
+              <td colspan="3"></td> 
               <td>
                 <button (click)="emptycart()" class="btn btn-outline-danger">Empty cart</button>
                 
@@ -52,7 +54,7 @@
                 <button class="btn btn-outline-warning" routerLink="/checkout">CheckOut</button>
                 
               </td>
-              <td><strong>Grand Total: ${{grandTotal*qty}}</strong></td>
+             
             </tr>
           </tbody>
   
@@ -65,8 +67,8 @@
 <ng-container *ngIf="products.length == 0">
   <div class="container-fluid">
     <div class="row">
-      <div class="title">
-        <h1 style="text-align: center; font-weight: 700;">Cart</h1>
+      <div class="title mt-4">
+        <h1 style="text-align: center; font-weight: 700; font-size: 30px;">Cart</h1>
       </div>
       <div class="col-12" >
         

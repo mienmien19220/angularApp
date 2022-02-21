@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 import { Product } from './game-product';
 
@@ -23,6 +24,7 @@ export class ProductService {
         "Green Earbuds",
         
     ];
+    
 
     constructor(private http: HttpClient) { }
 
@@ -34,11 +36,15 @@ export class ProductService {
     }
 
     getProducts() {
-        return this.http.get<any>('assets/products.json')
+        return this.http.get<any>('http://localhost:3000/product').pipe(map((res:any)=>{
+            return res;
+        }))
         .toPromise()
-        .then(res => <Product[]>res.data)
+        // .then(res => <Product[]>res.data)
         .then(data => { return data; });
     }
+
+    
 
     getProductsWithOrdersSmall() {
         return this.http.get<any>('assets/products-orders-small.json')

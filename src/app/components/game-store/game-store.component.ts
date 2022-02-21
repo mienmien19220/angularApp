@@ -14,14 +14,15 @@ import { ApiService } from 'src/app/shared/api.service';
 export class GameStoreComponent implements OnInit {
 
   public productList: any;
-
+  
   products: Product[];
 
   sortOptions: SelectItem[];
   sortOrder: number;
   sortField: string;
 
-  constructor(private productService: ProductService, private primengConfig: PrimeNGConfig, private cartService: CartService, private api: ApiService) { }
+  constructor(private productService: ProductService, private primengConfig: PrimeNGConfig, private cartService: CartService, private api: ApiService,
+  ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().then(data => this.products = data,
@@ -43,7 +44,7 @@ export class GameStoreComponent implements OnInit {
   }
   addtocart(product: any) { 
     this.cartService.addtoCart(product)
-    // .subscribe(res.send("add thành công"))
+    alert("add thanh cong")
   }
   onSortChange(event) {
     let value = event.value;

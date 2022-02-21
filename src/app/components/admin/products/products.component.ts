@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   loading: boolean = true;
   showAdd!: boolean
   showbtn!: boolean;
-  
+  allProductData: any[];
   product: Product[];
   public products : any = [];
     
@@ -77,13 +77,13 @@ export class ProductsComponent implements OnInit {
   }
 
   getAllProd() {
-    this.api.getProd().subscribe(res=>{
-      this.products = res;
+    this.api.getProducts().subscribe(res=>{
+      this.allProductData = res;
       
     })
   }
-  deleteProduct(product:any){
-    this.api.deleteProd(product.id).subscribe(res=>{
+  deleteProduct(products:any){
+    this.api.deleteProd(products.id).subscribe(res=>{
       alert("deleted");
       this.getAllProd(); 
       //quick refresh data
@@ -101,27 +101,6 @@ export class ProductsComponent implements OnInit {
 
       // console.log(data)
       
-      }
-  
-      updateUser(){
-        this.productModelObj.name = this.formValue.value.name;
-        this.productModelObj.price = this.formValue.value.price;
-        this.productModelObj.inventoryStatus = this.formValue.value.inventoryStatus;
-        this.productModelObj.quantity = this.formValue.value.quantity;
-        this.productModelObj.category = this.formValue.value.category;
-        this.productModelObj.image = this.formValue.value.image;
-        this.productModelObj.rating = this.formValue.value.rating;
-  
-        // this.api.updateDedo(this.productModelObj, this.productModelObj.id).subscribe(
-        //   res =>{
-            
-        //     let ref = document.getElementById('clear');
-        //     ref?.click();
-  
-        //     this.formValue.reset()
-        //     this.getAllProd();
-        //   }
-        // )
       }
 
   displayBasic: boolean;
